@@ -1,0 +1,33 @@
+/* estilos globais */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --white: #FFF;
+}
+
+body{
+  background-color: #F9FAFE;
+  overflow-x: hidden;
+}
+
+body, input, textarea, select, button{
+  font: 400 1rem 'Roboto', sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

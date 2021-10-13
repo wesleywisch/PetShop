@@ -1,0 +1,38 @@
+/* section-catBanner */
+
+.section-catBanner{
+  display: flex;
+  margin: 2rem 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-catBanner div {
+  width: 50%;
+  padding-right: 9rem;
+}
+
+.section-catBanner div h2{
+  color: #399CDF;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.section-catBanner div p{
+  color: #EE658F;
+  line-height: 1.6rem;
+}
+
+.section-catBanner div button{
+  margin: 2rem 0;
+  background-color: #1D58BA;
+  padding: 10px 20px;
+  border: none;
+  width: 220px;
+  border-radius: 30px;
+  color: var(--white)
+}
+
+.section-catBanner img {
+  width: 50%;
+}

@@ -1,0 +1,84 @@
+/* header */
+
+header .container-image {
+  width: 100%;
+  height: 700px;
+}
+
+header .container-image .banner{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+header .container-image .header-nav .petcare {
+  top: 1rem;
+  left: 4rem;
+  height: 80px;
+}
+
+header .container-image .header-nav {
+  position: absolute;
+  top: 1rem;
+  left: 4rem;
+  display: flex;
+}
+
+header .container-image .header-nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+header .container-image .header-nav .menu .ul-menu{
+  display: flex;
+  padding: 0 50px;
+  margin-left: 650px;
+}
+
+header .container-image .header-nav .menu .ul-menu li{
+  padding: 0 25px;
+  color: var(--white);
+}
+
+header .container-image .header-nav .menu .ul-socials{
+  display: flex;
+}
+
+header .container-image .header-nav .menu .ul-socials li{
+  padding: 0 12.5px;
+}
+
+header .container-image .header-text {
+  position: absolute;
+  top: 15rem;
+  left: 8em;
+}
+
+header .container-image .header-text h2{
+  font-size: 8rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.301);
+}
+
+header .container-image .header-text h2 strong{
+  color: var(--white);
+}
+
+header .container-image .header-text p{
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+header .container-image .header-text .arrow-bottom{
+  margin-left: 42%;
+  margin-top: 5%;
+}
+
+header .container-image .header-text .arrow-bottom img{
+  background-color: rgba(255, 255, 255, 0.601);
+  padding: 10px;
+  border-radius: 50%;
+}
