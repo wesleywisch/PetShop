@@ -5,6 +5,7 @@
   height: 560px;
   display: flex;
   margin: 5rem 10rem;
+  padding-left: 10%;
 }
 
 .section-about .container {
