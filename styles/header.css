@@ -1,5 +1,6 @@
 /* header */
 
+/* header imagem container como um todo */
 header .container-image {
   width: 100%;
   height: 700px;
@@ -9,19 +10,34 @@ header .container-image .banner{
   width: 100%;
   height: 100%;
   background-size: cover;
+  object-fit: cover;
 }
 
+/* logo */
+
 header .container-image .header-nav .petcare {
-  top: 1rem;
-  left: 4rem;
   height: 80px;
+  margin-left: 1rem;
 }
+
+/* navegação */
 
 header .container-image .header-nav {
   position: absolute;
   top: 1rem;
-  left: 4rem;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header .container-image .header-nav .menu-section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 30px;
 }
 
 header .container-image .header-nav .menu {
@@ -34,12 +50,17 @@ header .container-image .header-nav .menu {
 header .container-image .header-nav .menu .ul-menu{
   display: flex;
   padding: 0 50px;
-  margin-left: 650px;
 }
 
 header .container-image .header-nav .menu .ul-menu li{
-  padding: 0 25px;
+  padding: 10px 25px;
   color: var(--white);
+}
+
+header .container-image .header-nav .menu .ul-menu li:hover{
+  border: 1px solid #F9FAFE;
+  box-shadow: 0px 0px 28px 0px rgba(52,153,219,0.6);
+  border-radius: 30px;
 }
 
 header .container-image .header-nav .menu .ul-socials{
@@ -47,7 +68,50 @@ header .container-image .header-nav .menu .ul-socials{
 }
 
 header .container-image .header-nav .menu .ul-socials li{
-  padding: 0 12.5px;
+  display: flex;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  transition: transform .3s;
+}
+
+header .container-image .header-nav .menu .ul-socials li:hover{
+  transform: scale(1.4);
+}
+
+header .container-image .header-nav .menu .ul-socials li:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #b52b65, #ed6663);
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(100%,100%);
+  transition: all .4s;
+}
+
+header .container-image .header-nav .menu .ul-socials li:hover:before{
+  transform: translate(0);
+  animation: animate .4s linear;
+}
+
+@keyframes animate {
+  0%, 100%{
+    width: 100%;
+    height: 100%;
+  }
+  50%{
+    width: 50%;
+    height: 50%;
+  }
 }
 
 header .container-image .header-text {
@@ -81,4 +145,110 @@ header .container-image .header-text .arrow-bottom img{
   background-color: rgba(255, 255, 255, 0.601);
   padding: 10px;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 1050px){
+  header .container-image .header-nav .menu-section nav{
+    display: none;
+  }
+
+  .one,
+  .two,
+  .three{
+      background: white;
+      height: 5px;
+      width: 100%;
+      margin: 6px auto;
+      transition-duration: 0.3s;
+  }
+
+  header .container-image .header-nav .menu-section .menu-toggle{
+      width: 40px;
+      height: 30px;
+      margin-right: 30px;
+      position: absolute;
+      right: 0;
+  }
+
+  /*full screen*/
+  header .container-image .header-nav .menu-section.on{
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      top: -20px;
+      left: 0;
+
+      width: 100%;
+      height: 101vh;
+      background-color: #F4B62E;
+
+      z-index: 10;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  header .container-image .header-nav .menu-section.on nav{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  header .container-image .header-nav .menu-section.on nav .ul-socials{
+    display: flex;
+    margin-top: 10px;
+  }
+
+  header .container-image .header-nav .menu-section.on .menu-toggle {
+      position: absolute;
+      right: 6px;
+      top: 35px;
+  }
+
+  header .container-image .header-nav .menu-section.on .menu-toggle .one{
+      transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  header .container-image .header-nav .menu-section.on .menu-toggle .two{
+      opacity: 0;
+  }
+
+  header .container-image .header-nav .menu-section.on .menu-toggle .three{
+      transform: rotate(-45deg) translate(8px, -9px);
+  }
+
+  header .container-image .header-nav .menu-section.on nav ul{
+      text-align: center;
+      display: block;
+  }
+
+  header .container-image .header-nav .menu-section.on nav ul a{
+      transition-duration: 0.5s;
+      font-size: 3rem;
+      line-height: 4rem;
+      display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header .container-image .header-text h2{
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 644px) {
+  header .container-image .header-text {
+    position: absolute;
+    top: 15rem;
+    left: 2em;
+  }
+
+  header .container-image .header-text h2{
+    font-size: 3rem;
+  }
+
+  header .container-image .header-text p{
+    font-size: 1rem;
+  }
 }
