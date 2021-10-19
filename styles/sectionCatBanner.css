@@ -36,3 +36,27 @@
 .section-catBanner img {
   width: 50%;
 }
+
+@media screen and (max-width: 1500px) {
+  .section-catBanner{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-catBanner div {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section-catBanner img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section-catBanner{
+    margin: 2rem 2rem;
+  }
+}
