@@ -72,3 +72,48 @@ footer .footer-Contact ul li img{
   height: 25px;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 1450px) {
+  footer{
+    height: 720px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem auto;
+  }
+
+  footer .footer-marca{
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  footer .footer-Intuticional{
+    margin-bottom: 2rem;
+  }
+
+  footer .footer-Intuticional ul{
+    width: 100%;
+  }
+
+  footer .footer-Support{
+    margin-bottom: 2rem;
+  }
+
+  footer .footer-Contact ul li {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  footer .footer-Contact ul li img{
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer{
+    height: 900px;
+  }
+}
